@@ -1,0 +1,27 @@
+ 
+ 
+ val lines = Source.fromFile("C:\\Users\\DAVID\\Documents\\PF\\GLigaPro_2019.csv”).getLines.drop(1).toList
+ 
+ Presente en orden alfabético el nombre de los jugadores con más de 10 goles.
+ 
+ data.filter(_._4 >= 10).sorted
+ 
+ 
+Presente el nombre de los jugadores con mas de 10 goles, esta vez ordenados de forma descendente por el número de goles marcados. Consulte sobre la función sortBy.
+ data.sortBy(_._4 >= 10).reverse
+ 
+¿A qué club pertenece el máximo goleador del campeonato?
+data.maxBy(_._4)._2
+
+¿Cuál es la nacionalidad del máximo goleador del campeonato?
+data.maxBy(_._4)._3
+
+¿Cuáles son los nombres de los jugadores que han marcado un autogol?
+data.filter(_._5.contains("Sí"))
+
+¿Cuál es la frecuencia de los goles marcados? (Cuántos jugadores tienen 1 gol, 2 goles, 3 goles, 4, goles, etc). Consultar groupBy y mapValues.
+data.groupBy(_._4)
+¿Cuáles son los nombres de los jugadores que han marcado goles en más de un club?
+
+¿Cuáles son las nacionalidades y su frecuencia (número de veces que se repite) de los jugadores que han marcado más de 9?
+
